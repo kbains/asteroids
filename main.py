@@ -32,6 +32,7 @@ def main():
         screen.fill("black")
         # draw the player
         player.draw(screen)
+        player.update(dt)
         # refresh the screen
         pygame.display.flip()
         # pause the game loop until 1/60th of a second has passed
