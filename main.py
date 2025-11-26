@@ -28,11 +28,13 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
+        
+        # player movement
+        player.update(dt)
         # fill the screen with black
         screen.fill("black")
         # draw the player
         player.draw(screen)
-        player.update(dt)
         # refresh the screen
         pygame.display.flip()
         # pause the game loop until 1/60th of a second has passed
